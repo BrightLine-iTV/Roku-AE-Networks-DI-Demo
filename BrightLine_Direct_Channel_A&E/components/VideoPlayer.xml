@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="VideoPlayer" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <script type="text/brightscript" uri="pkg:/components/VideoPlayer.brs" />
+    <interface>
+		<field type="node" id="player" alias="VideoPlayer"/>
+		<!--Make sure to set alwaysNotify to true on the control string  -->
+		<field type="string" id="control" onChange="controlVideo" alwaysNotify="true"/>
+		<field type="node" id="content" alias="VideoPlayer.content"/>
+		<field type="float" id="position" alias="VideoPlayer.position"/>
+		<field type="string" id="state" alias="VideoPlayer.state"/>
+		<field type="time" id="seek" alias="VideoPlayer.seek"/>
+		<field type="Boolean" id="exited" value="false"/>
+		
+	
+    </interface>
+    <children>
+    	<Video   id="VideoPlayer"/>
+    </children>
+</component>

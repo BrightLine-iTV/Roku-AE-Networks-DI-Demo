@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="MainScene" initialFocus="VideoPlayer" extends="Scene" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<!-- importing main handler -->
+
+    <interface>
+    	<field id="environmentInfoText" type="string" alias="environmentInfoText.text" />
+		<field id="sdkLoadStatus" type="string" alwaysNotify="true" />
+		<field id="showDebug" type="boolean" />
+		<field id="pkgName" type="string" />
+	  </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+    <script type="text/brightscript" uri="pkg:/components/BrightLineDirect.brs" />
+
+
+  <children>
+	<Poster	id="header"
+      		uri="pkg:/Images/large-big-brightline_banner.png"
+      		loadDisplayMode="scaleToZoom"
+			width="1910"
+        	height="150"
+      		visible="true"
+      		translation="[10,10]"
+	/>
+	
+	<Label	id="titleLabel"
+			height="66"
+			width="0"
+			horizAlign = "left"
+			vertAlign = "center"
+			translation="[800,60]"
+	/>
+	
+	<Poster	id="smallLogo"
+      		uri="pkg:/Images/smallLogo.png"
+			width="50"
+        	height="64"
+      		visible="true"
+      		translation="[1750,60]"
+    />
+    
+	<LabelList	id="adList"
+	    		translation="[225,285]"
+	    		itemSize="[1350,50]"
+       			itemSpacing="[0,45]"
+       			color="#f1f1f1"
+       			focusedColor = "#0972F5"
+				opacity="1"
+	    		numRows="10"
+       			drawFocusFeedback = "false"
+	  			vertFocusAnimationStyle="floatingFocus">
+
+	  	<ContentNode id="moviemenucontent" role="content">
+			
+			<ContentNode
+				title="eOverlay"
+				Description="http://cdn-media.brightline.tv/campaigns/2019/q1/toyota/rav4/discovery.json?mblist=0&amp;session_id=O2612901742-A5197267132-C138290740530-1880692273"
+			/>
+			<ContentNode
+				title="Store Locator"
+				Description="http://cdn-media.brightline.tv/campaigns/brightline/development/roku/sg/media/json/universal-ben-moore-2.3.json?mblist=0&amp;session_id=O2612901742-A5197267132-C138290740530-1880692273"
+			/>
+			<ContentNode
+				title="Info Video Gallery"
+				Description="http://cdn-media.brightline.tv/campaigns/brightline/development/roku/internaltest/di/millerlite/spot1.discovery.internaltest.json?session_id=O2856943649-A5692382555-C138349848451-1312775115"
+			/>
+			<ContentNode
+				title="Image Gallery"
+				Description="http://cdn-media.brightline.tv/campaigns/2019/q1/bluebuffalo/lpf/ran_sg.json?mblist=0&amp;session_id=O2612901742-A5197267132-C138290740530-1880692273"
+			/>
+			<ContentNode
+				title="Video Gallery"
+				Description="http://cdn-media.brightline.tv/ads/2016-q4-joe-sg-tests/roku/videoGallery_ssai.json?mblist=0&amp;session_id=O2612901742-A5197267132-C138290740530-1880692273"
+			/>
+			<ContentNode
+				title="Multi-Feature"
+				Description="http://cdn-media.brightline.tv/ads/2016-q4-joe-sg-tests/roku/roku_universal_sg_legacy_ssai.json?mblist=0&amp;session_id=O2612901742-A5197267132-C138290740530-1880692273"
+			/>
+			
+  		</ContentNode>
+ 
+	</LabelList>
+	
+	<Rectangle
+		id="leftDivider"
+		translation="[1275, 200]"
+		color="0xFFFFFF"
+		width="1"
+		height="800"
+	/>
+
+    <Label 	id="environmentInfoText"
+		    height="600"
+		    width="400"
+        	color="#0972F5"
+		    text = ""
+		    horizAlign = "left"
+		    vertAlign = "top"
+		    translation="[1395,350]"
+        	wrap="true"
+        	visible="true"
+    />
+
+    <VideoPlayer id="VideoPlayer"/>
+
+	<TrackerTask/>
+    
+    </children>
+
+</component>

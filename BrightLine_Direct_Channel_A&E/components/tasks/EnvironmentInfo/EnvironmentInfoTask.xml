@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="EnvironmentInfoTask" extends="Task">
+    <script type="text/brightscript" uri="pkg:/components/tasks/EnvironmentInfo/EnvironmentInfoTask.brs" />
+
+     <interface>
+        <field id="environmentInfo" type="string" />
+        <field id="showDebug" type="boolean" />
+        <field id="pkgName" type="string" />
+     </interface>
+
+</component>

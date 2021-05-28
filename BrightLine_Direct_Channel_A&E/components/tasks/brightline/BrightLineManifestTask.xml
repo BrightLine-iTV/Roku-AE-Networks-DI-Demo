@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="BrightLineManifestTask" extends="Task" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <script type="text/brightscript" uri="pkg:/components/tasks/brightline/BrightLineManifestTask.brs" />
+    <interface>
+        <field id="manifest" type="assocarray" onChange="onManifestChange"/>
+    </interface>
+
+</component>
